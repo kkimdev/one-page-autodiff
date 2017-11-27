@@ -23,10 +23,18 @@ class Variable:
         rhs.adjoints.append((y, self.value))
         return y
 
+    def __truediv__(self, rhs):
+        # Exercise x1 / x2
+        raise NotImplementedError
+
     def sin(self):
         y = Variable(math.sin(self.value))
         self.adjoints.append((y, math.cos(self.value)))
         return y
+
+    def log(self):
+        # Exercise x1.log()
+        raise NotImplementedError
 
     def diff(self):
         assert Variable.all_variables[-1] == self
