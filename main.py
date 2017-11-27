@@ -36,12 +36,10 @@ class Variable:
             for y, adjoint in variable.adjoints:
                 variable.derivative += y.derivative * adjoint
 
-
 x1 = Variable(3.14)
 x2 = Variable(5)
 y = (x1 * x2) + x1.sin()
 print('y =', y.value)
-
 
 y.diff()
 print('dy/dx1 =', x1.derivative)
