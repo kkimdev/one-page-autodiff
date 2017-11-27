@@ -46,7 +46,7 @@ class Variable:
 
 x1 = Variable(3.14)
 x2 = Variable(5)
-y = (x1 * x2) + x1.sin()
+y = x1.sin() + (x1 * x2)
 print('y =', y.value)
 
 y.diff()
